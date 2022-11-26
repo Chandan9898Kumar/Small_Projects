@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { lazy, Suspense } from "react";
+const Header=lazy(()=> import('./NavLink/Header'))
+const TemperatureApp =lazy(()=> import('./TemperatureConverter/TempApp'))
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className=''> 
+    <BrowserRouter>
+      <Suspense fallback={<div className='loader'></div>}>
+        <Routes>
+          <Route  exact  path='/'  element={<Header  />}  />
+          <Route  exact  path='/Temperature'  element={<TemperatureApp  />}  />
+
+
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+  </div>
   );
 }
 

@@ -1,0 +1,27 @@
+.Header{
+display: flex;
+align-items: center;
+height: 80px;
+margin-top: 0;
+list-style: none;
+justify-content: space-around;
+background-color:olivedrab;
+}
+
+.Temperature{
+color: white;
+margin-left: 10px;
+ margin-right:1100px;
+text-decoration: none;
+}
+
+.Temperature:hover{
+    color: brown;
+    text-decoration: none;
+}
+
+.TemppWrapper{
+    background-color:olivedrab;
+    min-height: 100vh;
+    text-align: center;
+}
