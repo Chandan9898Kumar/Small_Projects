@@ -1,0 +1,45 @@
+name: Continuous Integration (CI)
+
+run-name: ${{ github.actor }} is testing out GitHub Actions.
+
+on:
+  push:
+    branches:
+      - feature/new_branch
+
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout to the repository
+        uses: actions/checkout@v2
+
+      # set-up node version
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2-beta
+        with:
+          # Reads the node version from the .nvmrc file itself 
+          # node-version-file: '.nvmrc'
+
+          # The node version can be hard-coded . ex- 
+          node-version: 14
+
+      # install dependencies.
+      - name: Install package dependencies
+        run: npm install
+
+      # Run test cases and this could ensure minimum coverage as well if set.
+      - name: Execute test cases
+        run: npm run test
+
+      # Run linting
+      - name: Check code lintings
+        run: npm run lint
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: output/test/code-coverage.html
