@@ -1,27 +1,41 @@
-.Header{
-display: flex;
-align-items: center;
-height: 80px;
-margin-top: 0;
-list-style: none;
-justify-content: space-around;
-background-color:olivedrab;
+
+.Header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  margin-top: 0;
+  list-style: none;
+  justify-content: space-around;
+  background-color: olivedrab;
 }
 
-.Temperature{
-color: white;
-margin-left: 10px;
- margin-right:1100px;
-text-decoration: none;
+.Temperature {
+  color: white;
+  margin-left: 10px;
+  margin-right: 1100px;
+  text-decoration: none;
 }
 
-.Temperature:hover{
-    color: brown;
-    text-decoration: none;
+.Temperature:hover {
+  color: brown;
+  text-decoration: none;
 }
 
-.TemppWrapper{
-    background-color:olivedrab;
-    min-height: 100vh;
-    text-align: center;
+.TemppWrapper {
+  background-color: olivedrab;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.TemperatureTwo {
+  position: absolute;
+  left: 190px;
+  width: 110px;
+  height: 120px;
+  color: white;
+  text-decoration: none;
+}
+.TemperatureTwo:hover {
+  color: brown;
+  text-decoration: none;
 }
