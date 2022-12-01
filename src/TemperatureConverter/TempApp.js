@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles.css";
+import "./styles.css";
 const TemperatureApp = () => {
   const [celciusValue, setCelciusValue] = useState('');
   const [FahenValue, setFahrenValue] = useState('');
