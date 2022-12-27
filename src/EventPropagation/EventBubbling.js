@@ -76,3 +76,29 @@ export default MyEvent;
 // to use capturing -:
 // Capturing is just as straightforward, but instead of the onClick prop,
 //  you have to use onClickCapture on your element.
+
+
+
+
+
+//   Second example of event bubbling.
+
+
+// import React, { useState } from "react";
+// function App() {
+//   const [counter, setCounter] = useState(0);
+//   return (
+//     <div onClick={() => setCounter((prevCounter) => prevCounter + 1)}>
+//       <button
+//         onClick={(event) => {
+//           event.stopPropagation();
+//           setCounter((prevCounter) => prevCounter + 1);
+//         }}
+//       >
+//         Counter value is: {counter}
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default App;
